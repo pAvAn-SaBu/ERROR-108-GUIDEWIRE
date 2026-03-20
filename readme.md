@@ -138,6 +138,8 @@ Models identify suspicious activity: GPS spoofing, fake location reporting, dupl
 Revo provides gig workers with **automatic financial protection against income loss caused by environmental disruptions**. By combining parametric insurance, AI risk modeling, and real-time monitoring, Revo delivers **fast, transparent, and scalable micro-insurance for the gig economy**.
 ---
 
+---
+
 ## ⚡ Project Showcase
 
 ### **💡 Inspiration**
@@ -162,3 +164,22 @@ We learned that **parametric triggers** are not just about weather; they are abo
 *   **Native Mobile App:** Moving from a web prototype to a full React Native mobile application.
 *   **Live API Integration:** Connecting the dashboard to actual Hyperlocal Weather and AQI APIs.
 *   **Expansion:** Integrating directly with delivery platform APIs (Swiggy, Zomato, Uber) to use active delivery logs as a 7th verification signal.
+
+---
+
+## 🌐 Deployment
+
+The Revo prototype is optimized for **GitHub Pages**.
+
+### **How to Deploy:**
+1.  Go to your GitHub repository: [ERROR-108-GUIDEWIRE](https://github.com/pAvAn-SaBu/ERROR-108-GUIDEWIRE)
+2.  Click on **Settings** -> **Pages**.
+3.  Under **Build and deployment**, set the Source to **Deploy from a branch**.
+4.  Select the **main** branch and the **/(root)** folder.
+5.  Click **Save**. Your site will be live at: `https://pAvAn-SaBu.github.io/ERROR-108-GUIDEWIRE/`
+
+### **Local Run:**
+```bash
+npx -y http-server . -p 8081 -c-1
+```
+Open `http://localhost:8081`
