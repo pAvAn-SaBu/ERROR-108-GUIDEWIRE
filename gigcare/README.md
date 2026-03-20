@@ -136,3 +136,31 @@ Models identify suspicious activity: GPS spoofing, fake location reporting, dupl
 ## 10. Expected Impact
 
 Revo provides gig workers with **automatic financial protection against income loss caused by environmental disruptions**. By combining parametric insurance, AI risk modeling, and real-time monitoring, Revo delivers **fast, transparent, and scalable micro-insurance for the gig economy**.
+
+---
+
+## ⚡ Project Showcase
+
+### **💡 Inspiration**
+Gig workers are the backbone of our modern economy, yet they are the most vulnerable to climate and city disruptions. We were inspired by the story of "Rahul," a delivery partner whose daily income can drop by 70% due to a single heavy downpour. Traditional insurance is too slow and bureaucratic for these micro-losses. We wanted to build a solution that was **instant, automated, and invisible.**
+
+### **🚀 What it does**
+**Revo** is an AI-powered parametric insurance platform. Instead of manual claims, it uses real-time data from weather and city APIs to detect income-threatening events (heavy rain, heatwaves, or curfews). When a disruption threshold is crossed in a worker’s specific zone, the system automatically triggers a claim. After a 4-second **6-signal fraud verification**, the payout is sent instantly via UPI—no paperwork, no waiting.
+
+### **🛠️ How we built it**
+We built a high-fidelity web prototype using **React 18** and a custom **Vanilla CSS Design System** focused on "Glassmorphism" for a premium feel. The core engine simulates real-time API polling and features a state-managed onboarding flow. The "special sauce" is our logic for **Multi-Signal Behavioral Fingerprinting**, which cross-references GPS movement, device sensors, and network signal degradation to verify claims without penalizing honest workers.
+
+### **🚧 Challenges we ran into**
+One of the biggest challenges was balancing a complex, data-heavy "Fraud Verification" process with a user experience that felt fast and frictionless. We solved this by designing an animated 3-tier resolution flow that keeps the worker informed in real-time while the AI works in the background.
+
+### **🏆 Accomplishments that we're proud of**
+We are incredibly proud of the **UI/UX transition** from a basic concept to a professional-grade landing page and dashboard. Achieving a full user journey—from initial landing to a verified claim payout—in a single, seamless flow was a major milestone for the team.
+
+### **📖 What we learned**
+We learned that **parametric triggers** are not just about weather; they are about trust. Building an insurance product for the gig economy requires moving away from "proof of loss" and toward "proof of event" backed by deep behavioral analytics. Simple GPS isn't enough; multi-signal verification is the only way to scale trust.
+
+### **🔮 What's next for Revo**
+*   **Native Mobile App:** Moving from a web prototype to a full React Native mobile application.
+*   **Live API Integration:** Connecting the dashboard to actual Hyperlocal Weather and AQI APIs.
+*   **Expansion:** Integrating directly with delivery platform APIs (Swiggy, Zomato, Uber) to use active delivery logs as a 7th verification signal.
+
