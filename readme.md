@@ -136,9 +136,6 @@ Models identify suspicious activity: GPS spoofing, fake location reporting, dupl
 ## 10. Expected Impact
 
 Revo provides gig workers with **automatic financial protection against income loss caused by environmental disruptions**. By combining parametric insurance, AI risk modeling, and real-time monitoring, Revo delivers **fast, transparent, and scalable micro-insurance for the gig economy**.
----
-
----
 
 ---
 
@@ -185,26 +182,6 @@ The Revo prototype is automatically deployed to **GitHub Pages** using GitHub Ac
 ### **Local Run:**
 ```bash
 cd gigcare
-npx -y http-server . -p 8081 -c-1
-```
-Open `http://localhost:8081`
-
-
----
-
-## 🌐 Deployment
-
-The Revo prototype is optimized for **GitHub Pages**.
-
-### **How to Deploy:**
-1.  Go to your GitHub repository: [ERROR-108-GUIDEWIRE](https://github.com/pAvAn-SaBu/ERROR-108-GUIDEWIRE)
-2.  Click on **Settings** -> **Pages**.
-3.  Under **Build and deployment**, set the Source to **Deploy from a branch**.
-4.  Select the **main** branch and the **/(root)** folder.
-5.  Click **Save**. Your site will be live at: `https://pAvAn-SaBu.github.io/ERROR-108-GUIDEWIRE/`
-
-### **Local Run:**
-```bash
 npx -y http-server . -p 8081 -c-1
 ```
 Open `http://localhost:8081`
