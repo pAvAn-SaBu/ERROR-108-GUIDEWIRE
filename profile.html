@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>REVO | Profile</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { "primary": "#a83300", "surface": "#f8fafa", "on-surface": "#191c1d" },
+                    fontFamily: { "sans": ["Plus Jakarta Sans", "sans-serif"] },
+                },
+            },
+        }
+    </script>
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; -webkit-font-smoothing: antialiased; }
+        .bg-saffron-gradient { background: linear-gradient(135deg, #a83300 0%, #d24200 100%); }
+    </style>
+    <script src="js/app.js"></script>
+</head>
+<body class="bg-surface text-on-surface antialiased min-h-screen">
+
+<!-- Header -->
+<header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-gray-100/50">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 h-20 flex justify-between items-center w-full">
+        <div class="flex items-center gap-4 md:gap-12">
+            <div class="flex items-center gap-2 cursor-pointer shrink-0" onclick="location.href='index.html'">
+                <span class="material-symbols-outlined text-orange-600 text-3xl font-black" style="font-variation-settings: 'FILL' 1;">analytics</span>
+                <h1 class="text-2xl font-black text-on-surface tracking-tighter">REVO</h1>
+            </div>
+            <nav class="hidden md:flex items-center gap-8 text-[11px] font-black uppercase tracking-[0.15em] text-neutral-400 whitespace-nowrap">
+                <a href="landing.html" class="hover:text-orange-600 transition-colors">Home</a>
+                <a href="index.html" class="hover:text-orange-600 transition-colors">Shield</a>
+                <a href="coverage.html" class="hover:text-orange-600 transition-colors">Plans</a>
+            </nav>
+        </div>
+        <div class="flex items-center gap-3 md:gap-6">
+            <button onclick="location.href='coverage.html'" class="bg-saffron-gradient text-white px-6 md:px-8 py-2 md:py-3 rounded-full font-black text-[10px] md:text-xs uppercase tracking-widest hover:scale-105 active:scale-95 transition-all shadow-xl shadow-orange-100 whitespace-nowrap">Start Protection</button>
+            <div class="w-10 h-10 rounded-full border-2 border-orange-600 shadow-xl overflow-hidden cursor-pointer shrink-0 flex items-center justify-center bg-orange-50">
+                <span class="material-symbols-outlined text-orange-600">person</span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="pt-32 px-6 max-w-2xl mx-auto pb-32">
+    <!-- Profile Card -->
+    <div class="bg-white rounded-[3.5rem] p-12 md:p-16 shadow-2xl border border-gray-100 space-y-12">
+        <!-- Avatar & Name -->
+        <div class="flex flex-col items-center text-center space-y-6">
+            <div class="w-28 h-28 rounded-full bg-orange-50 border-4 border-orange-600 flex items-center justify-center">
+                <span class="material-symbols-outlined text-orange-600 text-5xl" style="font-variation-settings: 'FILL' 1;">person</span>
+            </div>
+            <div>
+                <h2 id="profile-name" class="text-4xl font-black tracking-tight">Loading...</h2>
+                <p id="profile-email" class="text-sm text-neutral-400 font-medium mt-2">—</p>
+            </div>
+            <span class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-orange-50 text-orange-600 text-[10px] font-black uppercase tracking-[0.2em]">
+                <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">verified</span> Verified Member
+            </span>
+        </div>
+
+        <hr class="border-gray-100">
+
+        <!-- Stats -->
+        <div class="grid grid-cols-3 gap-6 text-center">
+            <div>
+                <p id="profile-rating" class="text-3xl font-black tracking-tighter">4.8</p>
+                <p class="text-[10px] font-black uppercase tracking-[0.2em] text-neutral-400 mt-1">Rating</p>
+            </div>
+            <div>
+                <p id="profile-balance" class="text-3xl font-black tracking-tighter">₹0</p>
+                <p class="text-[10px] font-black uppercase tracking-[0.2em] text-neutral-400 mt-1">Wallet</p>
+            </div>
+            <div>
+                <p id="profile-policy" class="text-3xl font-black tracking-tighter">—</p>
+                <p class="text-[10px] font-black uppercase tracking-[0.2em] text-neutral-400 mt-1">Plan</p>
+            </div>
+        </div>
+
+        <hr class="border-gray-100">
+
+        <!-- Quick Links -->
+        <div class="space-y-4">
+            <a href="coverage.html" class="flex items-center justify-between p-6 bg-gray-50 rounded-3xl hover:bg-orange-50 transition-colors group">
+                <div class="flex items-center gap-4">
+                    <span class="material-symbols-outlined text-neutral-400 group-hover:text-orange-600 transition-colors">grid_view</span>
+                    <span class="font-black text-sm">Change Plan</span>
+                </div>
+                <span class="material-symbols-outlined text-neutral-300 group-hover:text-orange-600 transition-colors">chevron_right</span>
+            </a>
+            <a href="index.html" class="flex items-center justify-between p-6 bg-gray-50 rounded-3xl hover:bg-orange-50 transition-colors group">
+                <div class="flex items-center gap-4">
+                    <span class="material-symbols-outlined text-neutral-400 group-hover:text-orange-600 transition-colors">shield</span>
+                    <span class="font-black text-sm">Active Shield</span>
+                </div>
+                <span class="material-symbols-outlined text-neutral-300 group-hover:text-orange-600 transition-colors">chevron_right</span>
+            </a>
+        </div>
+
+        <!-- Sign Out -->
+        <button onclick="localStorage.removeItem('revo_app_state'); location.href='auth.html'" class="w-full py-5 rounded-[2rem] border-2 border-gray-100 font-black text-sm uppercase tracking-widest text-neutral-400 hover:border-red-200 hover:text-red-500 transition-all">
+            Sign Out
+        </button>
+    </div>
+</main>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const state = REVO.getState();
+        document.getElementById('profile-name').innerText = state.user?.name || 'User';
+        document.getElementById('profile-email').innerText = state.user?.email || 'No email set';
+        document.getElementById('profile-rating').innerText = state.user?.rating || '4.8';
+        document.getElementById('profile-balance').innerText = '₹' + (state.walletBalance || 0);
+        document.getElementById('profile-policy').innerText = state.activePolicy?.name || '—';
+    });
+</script>
+
+</body>
+</html>

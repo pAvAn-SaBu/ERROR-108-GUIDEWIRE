@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>REVO | Safety Net</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .bg-saffron-gradient {
+            background: linear-gradient(135deg, #a83300 0%, #d24200 100%);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "outline-variant": "#e5beb2",
+                "tertiary": "#5d5c5b",
+                "outline": "#907065",
+                "on-secondary-container": "#007432",
+                "surface-container-lowest": "#ffffff",
+                "secondary-fixed-dim": "#4ae176",
+                "on-tertiary-fixed-variant": "#474746",
+                "primary-container": "#d24200",
+                "primary-fixed-dim": "#ffb59d",
+                "surface-dim": "#d8dada",
+                "on-tertiary": "#ffffff",
+                "on-primary-fixed": "#390c00",
+                "on-surface-variant": "#5c4037",
+                "surface-container-low": "#f2f4f4",
+                "on-background": "#191c1d",
+                "secondary-fixed": "#6bff8f",
+                "inverse-on-surface": "#eff1f1",
+                "on-error": "#ffffff",
+                "inverse-surface": "#2e3131",
+                "surface-bright": "#f8fafa",
+                "primary-fixed": "#ffdbd0",
+                "on-secondary-fixed": "#002109",
+                "secondary": "#006e2f",
+                "tertiary-fixed": "#e5e2e1",
+                "on-tertiary-fixed": "#1b1b1b",
+                "surface-container": "#eceeee",
+                "background": "#f8fafa",
+                "tertiary-fixed-dim": "#c8c6c5",
+                "on-primary-fixed-variant": "#832600",
+                "error": "#ba1a1a",
+                "surface-variant": "#e1e3e3",
+                "primary": "#a83300",
+                "inverse-primary": "#ffb59d",
+                "surface-container-highest": "#e1e3e3",
+                "on-surface": "#191c1d",
+                "error-container": "#ffdad6",
+                "on-tertiary-container": "#fffcfb",
+                "on-error-container": "#93000a",
+                "surface": "#f8fafa",
+                "on-secondary-fixed-variant": "#005321",
+                "surface-container-high": "#e6e8e9",
+                "secondary-container": "#6bff8f",
+                "on-secondary": "#ffffff",
+                "on-primary-container": "#fffbff",
+                "on-primary": "#ffffff",
+                "surface-tint": "#ac3500",
+                "tertiary-container": "#757474"
+              },
+              fontFamily: {
+                "headline": ["Plus Jakarta Sans"],
+                "body": ["Plus Jakarta Sans"],
+                "label": ["Plus Jakarta Sans"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+      </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  <script src="js/app.js"></script>
+  </head>
+<body class="bg-surface text-on-surface antialiased min-h-screen">
+<!-- Top Navigation Header -->
+<header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-gray-100/50">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 h-20 flex justify-between items-center w-full">
+        <div class="flex items-center gap-4 md:gap-12">
+            <div class="flex items-center gap-2 cursor-pointer shrink-0" onclick="location.href='landing.html'">
+                <span class="material-symbols-outlined text-orange-600 text-3xl font-black" style="font-variation-settings: 'FILL' 1;">analytics</span>
+                <h1 class="text-2xl font-black text-on-surface tracking-tighter">REVO</h1>
+            </div>
+            <!-- Responsive Nav: Scrollable on small screens, grid on large -->
+            <nav class="flex items-center gap-4 md:gap-8 text-[10px] md:text-[11px] font-black uppercase tracking-[0.15em] text-neutral-400 overflow-x-auto no-scrollbar whitespace-nowrap pb-1 md:pb-0">
+                <a href="#" class="text-orange-600 border-b-2 border-orange-600 pb-1">Home</a>
+                <a href="index.html" class="hover:text-orange-600 transition-colors">Shield</a>
+                <a href="coverage.html" class="hover:text-orange-600 transition-colors">Plans</a>
+            </nav>
+        </div>
+        <div class="flex items-center gap-3 md:gap-6">
+            <button class="bg-saffron-gradient text-white px-4 md:px-8 py-2 md:py-3 rounded-full font-black text-[10px] md:text-xs uppercase tracking-widest hover:scale-105 active:scale-95 transition-all shadow-xl shadow-orange-100 whitespace-nowrap" onclick="location.href='coverage.html'">Start Protection</button>
+            <div class="w-10 h-10 rounded-full border-2 border-white shadow-xl overflow-hidden cursor-pointer shrink-0 flex items-center justify-center bg-gray-100" onclick="goToProfile()">
+                <span class="material-symbols-outlined text-gray-500">person</span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="pt-16 pb-24">
+<!-- Hero Section -->
+<section class="px-6 pt-12 pb-24 bg-surface max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+    <div class="space-y-8">
+        <span class="inline-block px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-[12px] font-bold tracking-wider uppercase">Parametric Protection</span>
+        <h1 class="text-5xl md:text-7xl font-extrabold text-on-background tracking-tight leading-[1.05]">
+            Earn with <br/> <span class="text-primary">Peace of Mind</span>
+        </h1>
+        <p class="text-on-surface-variant text-xl leading-relaxed max-w-lg">
+            Protect your wages from the <span class="text-error font-bold">Income Cliff.</span> When extreme weather hits, earnings drop by 70%. We bridge the gap instantly.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 pt-4">
+            <button onclick="location.href='coverage.html'" class="bg-saffron-gradient text-white font-bold py-5 px-10 rounded-2xl shadow-[0_12px_24px_rgba(168,51,0,0.25)] text-lg active:scale-95 transition-transform">
+                Shield Your Earnings
+            </button>
+            <a href="coverage.html" class="inline-flex items-center justify-center font-bold px-8 py-5 text-on-surface-variant hover:text-primary transition-colors">
+                View Coverage Plans
+            </a>
+        </div>
+    </div>
+
+    <!-- Premium Hero Card -->
+    <div class="relative group">
+        <div class="absolute -inset-1 bg-gradient-to-r from-primary to-orange-400 rounded-[3rem] blur opacity-10 group-hover:opacity-20 transition duration-1000"></div>
+        <div class="relative bg-surface-container-lowest p-10 rounded-[3rem] shadow-[0_32px_64px_rgba(0,0,0,0.06)] border border-outline-variant/10 overflow-hidden">
+            <div class="absolute top-0 right-0 p-8">
+                <span class="material-symbols-outlined text-primary-container/20 text-8xl" data-icon="security">security</span>
+            </div>
+            <div class="relative z-10">
+                <div class="flex items-center gap-3 mb-8">
+                    <span class="material-symbols-outlined text-primary text-3xl" data-icon="payments">payments</span>
+                    <span class="text-primary font-bold tracking-tight text-xl">Income Shield active</span>
+                </div>
+                <h2 class="text-4xl font-extrabold text-on-background mb-6">
+                    ₹30/week <span class="text-lg font-normal text-on-surface-variant block mt-2">covers your income against rain, heat, and spikes.</span>
+                </h2>
+                <div class="flex flex-wrap gap-4 mt-12">
+                    <div class="bg-surface-container-low px-5 py-4 rounded-2xl flex items-center gap-3">
+                        <span class="material-symbols-outlined text-blue-500" data-icon="water_drop">water_drop</span>
+                        <span class="text-sm font-bold">Rainfall > 15mm</span>
+                    </div>
+                    <div class="bg-surface-container-low px-5 py-4 rounded-2xl flex items-center gap-3">
+                        <span class="material-symbols-outlined text-orange-500" data-icon="thermostat">thermostat</span>
+                        <span class="text-sm font-bold">Heat > 44°C</span>
+                    </div>
+                    <div class="bg-surface-container-low px-5 py-4 rounded-2xl flex items-center gap-3">
+                        <span class="material-symbols-outlined text-purple-500" data-icon="air">air</span>
+                        <span class="text-sm font-bold">AQI > 351</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- Comparison Section -->
+<section class="px-6 py-24 bg-surface-container-low">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <!-- Income Cliff Visualization -->
+        <div class="p-10 bg-white rounded-[3rem] shadow-xl border border-outline-variant/10">
+            <h3 class="text-2xl font-black mb-8">The Income Cliff</h3>
+            <div class="flex justify-between items-end mb-8 h-48">
+                <div class="flex flex-col items-center gap-4 flex-1">
+                    <p class="text-[10px] font-bold text-tertiary uppercase tracking-widest">Normal Day</p>
+                    <div class="w-16 bg-secondary/20 rounded-t-2xl relative h-32">
+                        <div class="absolute bottom-0 w-full h-full bg-secondary rounded-t-2xl"></div>
+                    </div>
+                    <p class="text-2xl font-black text-on-surface">₹1,000</p>
+                </div>
+                <div class="flex flex-col items-center justify-center px-4 h-32">
+                    <span class="material-symbols-outlined text-error text-3xl font-black" data-icon="trending_down">trending_down</span>
+                    <span class="text-error font-black text-sm">-70%</span>
+                </div>
+                <div class="flex flex-col items-center gap-4 flex-1">
+                    <p class="text-[10px] font-bold text-error uppercase tracking-widest">Disruption</p>
+                    <div class="w-16 bg-error/20 rounded-t-2xl relative h-32">
+                        <div class="absolute bottom-0 w-full h-[30%] bg-error rounded-t-2xl"></div>
+                    </div>
+                    <p class="text-2xl font-black text-error">₹300</p>
+                </div>
+            </div>
+            <p class="text-sm text-center text-on-surface-variant italic font-medium">"This ₹700 gap is what REVO shields instantly."</p>
+        </div>
+
+        <div class="space-y-6">
+            <h3 class="text-4xl font-black tracking-tight">How it works</h3>
+            <p class="text-lg text-on-surface-variant leading-relaxed">Unlike traditional insurance that takes weeks to process claims, REVO is parametric. We monitor satellite data 24/7. When a trigger is met, the money is moved automatically.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-6">
+                <div class="p-6 rounded-2xl bg-white border border-outline-variant/10">
+                    <p class="text-[10px] font-bold text-tertiary uppercase mb-2">Traditional</p>
+                    <p class="text-sm font-medium text-on-surface-variant flex items-center gap-2">
+                        <span class="material-symbols-outlined text-error text-lg">close</span> 14-Day Wait
+                    </p>
+                    <p class="text-sm font-medium text-on-surface-variant flex items-center gap-2 mt-1">
+                        <span class="material-symbols-outlined text-error text-lg">close</span> Manual Claims
+                    </p>
+                </div>
+                 <div class="p-6 rounded-2xl bg-orange-50 border border-orange-200">
+                    <p class="text-[10px] font-bold text-primary uppercase mb-2">REVO</p>
+                    <p class="text-sm font-bold text-primary flex items-center gap-2">
+                        <span class="material-symbols-outlined text-secondary text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span> Instant Payout
+                    </p>
+                    <p class="text-sm font-bold text-primary flex items-center gap-2 mt-1">
+                        <span class="material-symbols-outlined text-secondary text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span> 100% Automated
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Dynamic Bento Section -->
+<section class="max-w-7xl mx-auto px-6 py-24">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="md:col-span-2 bg-surface-container-high p-12 rounded-[3rem] flex flex-col justify-center">
+            <h4 class="text-3xl font-black mb-4">Satellite Verification</h4>
+            <p class="text-lg text-on-surface-variant leading-relaxed max-w-2xl">No claims adjusters needed. We use real-time weather data to verify triggers and initiate payments instantly to your linked wallet. Your income is protected before the rain even starts.</p>
+        </div>
+        <div class="bg-primary-fixed p-10 rounded-[3rem] flex flex-col justify-between aspect-square md:aspect-auto">
+            <span class="material-symbols-outlined text-on-primary-fixed text-5xl" data-icon="bolt" style="font-variation-settings: 'FILL' 1;">bolt</span>
+            <p class="text-on-primary-fixed text-2xl font-extrabold leading-tight">Instant <br/>Payouts</p>
+        </div>
+        <div class="bg-secondary-fixed p-10 rounded-[3rem] flex flex-col justify-between aspect-square md:aspect-auto">
+            <span class="material-symbols-outlined text-on-secondary-fixed text-5xl" data-icon="verified_user" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+            <p class="text-on-secondary-fixed text-2xl font-extrabold leading-tight">100% <br/>Digital</p>
+        </div>
+        <div class="md:col-span-2 bg-surface-container-highest p-10 rounded-[3rem] flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="space-y-4">
+                <h4 class="text-2xl font-black">Trusted by the best</h4>
+                <p class="text-on-surface-variant">Integrating with the platforms you use daily.</p>
+            </div>
+            <div class="flex flex-wrap gap-8 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/12/Swiggy_logo.svg/2560px-Swiggy_logo.svg.png" class="h-6" alt="Swiggy">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Zomato_Logo.svg/1024px-Zomato_Logo.svg.png" class="h-6" alt="Zomato">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Zepto_Logo.svg/2560px-Zepto_Logo.svg.png" class="h-6" alt="Zepto">
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+
+<footer class="bg-white py-12 border-t border-outline-variant/10">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+        <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-orange-600 font-extrabold">analytics</span>
+            <span class="text-xl font-black tracking-tighter">REVO</span>
+        </div>
+        <p class="text-sm text-on-surface-variant font-medium text-center">© 2026 Revo Technologies. Building the financial safety net for the gig economy.</p>
+        <div class="flex gap-6">
+            <a href="#" class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined">share</span></a>
+            <a href="#" class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined">help</span></a>
+        </div>
+    </div>
+</footer>
+
+<!-- Bottom Navigation for Mobile -->
+<div class="md:hidden">
+    <nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-white/90 dark:bg-neutral-900/90 backdrop-blur-xl shadow-[0_-8px_24px_rgba(25,28,29,0.06)] z-50 rounded-t-2xl border-t border-outline-variant/10">
+        <a class="flex flex-col items-center justify-center text-orange-600 bg-orange-50 rounded-xl px-5 py-2 active:scale-90 duration-200 transition-transform" href="landing.html">
+            <span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+            <span class="text-[11px] font-bold">Home</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-neutral-500 px-5 py-2 hover:text-orange-600 active:scale-90 duration-200 transition-transform" href="coverage.html">
+            <span class="material-symbols-outlined mb-1" data-icon="grid_view">grid_view</span>
+            <span class="text-[11px] font-medium">Plans</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-neutral-500 px-5 py-2 hover:text-orange-600 active:scale-90 duration-200 transition-transform" href="index.html">
+            <span class="material-symbols-outlined mb-1" data-icon="shield">shield</span>
+            <span class="text-[11px] font-medium">Shield</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-neutral-500 px-5 py-2 hover:text-orange-500 active:scale-90 duration-200 transition-transform" href="javascript:goToProfile()">
+            <span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+            <span class="text-[11px] font-medium">Profile</span>
+        </a>
+    </nav>
+</div>
+</body></html>
+y></html>
